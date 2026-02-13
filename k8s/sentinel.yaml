@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sentinel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sentinel
+  template:
+    metadata:
+      labels:
+        app: sentinel
+    spec:
+      containers:
+        - name: sentinel
+          image: berkunsal/url-sentinel-worker:v1.0.0 # UPDATE THIS
+          imagePullPolicy: Always
+          env:
+            - name: REDIS_HOST
+              value: "redis"  # Connects to the Service defined in Step 2
+            - name: URLS
+              valueFrom:
+                configMapKeyRef:
+                  name: sentinel-config
+                  key: urls

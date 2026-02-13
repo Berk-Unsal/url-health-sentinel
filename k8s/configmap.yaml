@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sentinel-config
+data:
+  # The Python script expects a comma-separated string
+  urls: "https://www.google.com,https://www.github.com,https://kubernetes.io,https://news.ycombinator.com"

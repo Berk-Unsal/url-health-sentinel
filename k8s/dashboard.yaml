@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard
+spec:
+  type: NodePort  # Exposes the service to your local machine
+  selector:
+    app: dashboard
+  ports:
+    - port: 80
+      targetPort: 5000
+      nodePort: 30000 # Fixed port for easy access
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+        - name: dashboard
+          image: dashboard:v8 # UPDATE THIS
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 30000
+          env:
+            - name: REDIS_HOST
+              value: "redis"

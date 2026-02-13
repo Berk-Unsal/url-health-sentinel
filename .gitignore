@@ -1,0 +1,15 @@
+# Python garbage
+__pycache__/
+*.pyc
+venv/
+.env
+
+# System garbage
+.DS_Store
+
+# IDE garbage
+.vscode/
+.idea/
+
+# Optional: Ignore your template notes if they aren't for the public
+project_template.txt
