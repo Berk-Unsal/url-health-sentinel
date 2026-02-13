@@ -14,11 +14,11 @@ spec:
     spec:
       containers:
         - name: sentinel
-          image: berkunsal/url-sentinel-worker:v1.0.0 # UPDATE THIS
+          image: berkunsal/url-sentinel-worker:v1.0.0 
           imagePullPolicy: Always
           env:
             - name: REDIS_HOST
-              value: "redis"  # Connects to the Service defined in Step 2
+              value: "redis"  
             - name: URLS
               valueFrom:
                 configMapKeyRef:

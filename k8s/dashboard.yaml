@@ -27,8 +27,8 @@ spec:
     spec:
       containers:
         - name: dashboard
-          image: dashboard:v8 # UPDATE THIS
-          imagePullPolicy: Never
+          image: berkunsal/url-sentinel-dashboard:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 30000
           env:
