@@ -4,15 +4,13 @@ A resilient, self-healing microservices application for monitoring website uptim
 
 I built this project to explore Cloud Native architecture. It moves beyond simple scripts by decoupling the frontend from the backend worker and using a stateful database to ensure your data survives even if the application crashes.
 
----
+## Screenshots
 
-## 📸 Screenshots
+### System Dashboard
+![Main Dashboard](assets/dashboard_main.png)
 
-| **System Dashboard** | **Station Management** |
-|:---:|:---:|
-| ![Main Dashboard](assets/dashboard_main.png) | ![Station Folders](assets/stations.png) |
-
----
+### Station Management
+![Station Folders](assets/stations.png)
 
 ## 🧠 How It Works
 
