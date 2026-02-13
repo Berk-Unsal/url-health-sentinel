@@ -10,6 +10,3 @@ venv/
 # IDE garbage
 .vscode/
 .idea/
-
-# Optional: Ignore your template notes if they aren't for the public
-project_template.txt
